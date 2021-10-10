@@ -1,24 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+function App(props: any) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Hello World from WebApp 1 -&gt; External text : {props.textValue ? props.textValue : "-"}</p>
+      <button onClick={() => props.setTextValue("Hello")}>Hello</button>
+      <button onClick={() => props.setTextValue("World")}>World</button>
     </div>
   );
 }
